@@ -9,6 +9,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
 #from ydata_profiling import ProfileReport
 from sklearn.model_selection import train_test_split
+import io
 #from streamlit_pandas_profiling import st_profile_report
 
 # give a title to our app 
@@ -17,7 +18,13 @@ st.title('Financial Inclusion Dataset')
 st.header('Exploration des données du dataset')
 data=pd.read_csv('Financial_inclusion_dataset.csv')
 st.dataframe(data)
-st.write("Infos et description du dataset")
+st.write("Infos du dataset")
+
+buffer = io.StringIO()
+data.info(buf=buffer)
+s = buffer.getvalue()
+
+st.text(s)
 st.warning("data.info()/data.describe()")
 st.write(data.info())
 st.write(data.describe())
