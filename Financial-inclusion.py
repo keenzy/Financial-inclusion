@@ -7,9 +7,9 @@ from plotly.subplots import make_subplots
 import plotly.express as px
 from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
-from ydata_profiling import ProfileReport
+#from ydata_profiling import ProfileReport
 from sklearn.model_selection import train_test_split
-from streamlit_pandas_profiling import st_profile_report
+#from streamlit_pandas_profiling import st_profile_report
 
 # give a title to our app 
 st.title('Financial Inclusion Dataset') 
@@ -19,8 +19,8 @@ data=pd.read_csv('Financial_inclusion_dataset.csv')
 st.dataframe(data)
 profile = ProfileReport(data)
 st.subheader('Rapport d’analyse exploratoire des données')
-st_profile_report(profile)
-st.subheader('Gestion données manquantes')
+#st_profile_report(profile)
+#st.subheader('Gestion données manquantes')
 st.write('Nombre de données manquantes')
 st.warning('data.isnull().sum()')
 st.write(data.isnull().sum())
