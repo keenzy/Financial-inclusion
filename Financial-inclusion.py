@@ -98,7 +98,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 #Testez un classifieur
 st.subheader("Testez un classifieur de machine learning")
 
-st.subheader("Create a kNN classifier")
+st.write("Create a kNN classifier")
 st.warning("k = 5  # Choose the number of neighbors\n knn_classifier = KNeighborsClassifier(n_neighbors=k) \n ")
 st.warning("k = 5  # Choose the number of neighbors")
 k = 5  # Choose the number of neighbors
