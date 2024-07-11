@@ -116,3 +116,19 @@ y_pred = knn_classifier.predict(X_test)
 st.warning("accuracy = accuracy_score(y_test, y_pred)")
 accuracy = accuracy_score(y_test, y_pred)
 st.success(f"Accuracy: {accuracy:.2f}")
+
+with st.form("my_form"):
+   st.write("Financial Inclusion Form")
+   country = st.text_input("Conutry","")
+   year = st.text_input("Year","")
+   cellphone_acess = st.text_input("Cell phone access", "")
+   age = st.text_input("Age", "")
+   # Every form must have a submit button.
+   gender = st.text_input("Gender", "")
+   education_level = st.text_input("ducation_level", "")
+   job_type = st.text_input("job_type", "")
+   submitted = st.form_submit_button("Submit")
+   if submitted:
+       st.write("slider", slider_val, "checkbox", checkbox_val)
+
+st.write("Outside the form")
